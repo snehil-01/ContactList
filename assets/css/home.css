@@ -1,0 +1,46 @@
+body{
+    margin: 0%;
+    font-family: sans-serif;
+    }
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: gray;
+}
+
+#contacts-list-container il{
+    padding: 0;
+    list-style: none;
+}
+
+
+
+/* FORM EDITING */
+.d1{
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
+font-family: cursive;
+margin: 5px;
+background-color: blue;
+}
+.contact{
+    padding: 3px 10px;
+    border: 1px solid white;
+    background-color: black;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    color: white;
+}
+
+.contact .details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.contact .delete-button{
+    width: 10%;
+    padding: 3px;
+}

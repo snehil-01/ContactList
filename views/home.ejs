@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f90e5622c0.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body><div>
+    
+    <h1 id="page-heading">
+        <i class="fa-solid fa-address-book"></i>
+        My Contact List</h1>
+</div>
+    <div id="contacts-list-container">
+    <ul>
+    <% for (let i of contact_List){%>
+        <!-- <i class="fa-solid fa-circle-trash" ></i> -->
+        
+        <li class="contact">
+        <div class="details">
+            <%= i.name%> <br>
+            <%= i.phone%> <br>
+            <%= i.gender%> <br>
+        </div>
+        <div class="delete-button">
+            <a href="/delete-contact/?id=<%= i._id %>&name=<%= i.name%>&gender=<%= i.gender%>">  delete </a>
+            <!-- <i class="fa-solid fa-file-xmark"></i> -->
+        </div>    
+            
+       
+          
+        </li>
+        <%} %>
+    </ul>
+</div>
+<div class="d1">
+    <form action="/create-contact" method="POST">
+        <input type="text" name="name" placeholder="Enter Name" required> <br> <br>
+        <input type="number" name="phone" placeholder="Enter Phone" required> <br> <br>
+        Gender<input type="radio" name="gender" value="Male">Male 
+              <input type="radio" name="gender" value="Female">Female
+        <br>
+
+        <button type="submit">Add contact</button>
+    </form>
+</div>
+    <script type="text/javascript" src="/js/home.js"> </script>
+</body>
+</html>
